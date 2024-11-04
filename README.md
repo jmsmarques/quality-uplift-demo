@@ -166,20 +166,8 @@ fs.writeFileSync('README.md', readmeContent);
 **Objective**: Integrate an HTML linter to check for code quality before deployment.
 
 ### Steps:
-1. Add an HTML linter configuration file (e.g., `.htmlhintrc`) in the root of the repository.
-2. Write a GitHub Action that runs the HTML linter and fails if there are validation errors.
-```
-# Define the input title
-newTitle="${{ github.event.inputs.newTitle }}"
-
-# Use sed to replace the title in index.html
-sed -i 's|<title>.*</title>|<title>'"$newTitle"'</title>|' index.html
-
-# Verify the change
-echo "Updated title to: $newTitle"
-cat index.html
-```
-3. Ensure the worflow is capable of changing the title.
+1. Write a GitHub Action changes the page title based on an input.
+2. Ensure the worflow is capable of changing the title.
 
 **Success Criteria**: The GitHub Action should be able to change the HTML file.
 
