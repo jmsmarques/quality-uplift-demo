@@ -9,7 +9,7 @@ These exercises will guide you through setting up and using GitHub Actions to au
 
 ### Steps:
 1. Create a new repository named `github-pages-actions`.
-2. Add a basic `index.html` file in a `docs` folder with a "Hello World" message.
+2. Add a basic `index.html` file in the root folder.
 ```<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,7 +134,7 @@ These exercises will guide you through setting up and using GitHub Actions to au
 
 ### Steps:
 1. Create a pipeline named `readme.yaml`.
-2. Write a GitHub Action that reads the contents of `index.html` and creates a README based on it's contents.
+2. Write a GitHub Action that reads the contents of `index.html` and creates a README based on its contents.
 ```
 node -e "
 const fs = require('fs');
@@ -185,7 +185,7 @@ fs.writeFileSync('README.md', readmeContent);
 
 ---
 
-## Exercise 5: Use Blue/Green Deployment
+## Exercise 5: Create a Blue/Green Deployment
 **Objective**: Implement a pipeline that changes `index.html` contents than `index_v2.html`.
 
 ### Steps:
